@@ -107,6 +107,14 @@ Qualquer token pode ser separado por espaço(s) em branco, fim de arquivo ou com
 | 50     | ..         | Símbolo especial                  |
 | 51     | \$         | Fim de arquivo                    |
 
+### Diagrama (Autômato Finito)
+
+![Diagrama (Autômato Finito)](/docs/diagrama.png)
+
+### Diagram de classe
+
+![Diagram de classe](/docs/diagrama_de_classe.png)
+
 ## Licença
 
 Este projeto está sobre a [licença MIT](/LICENSE).
