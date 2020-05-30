@@ -1,0 +1,21 @@
+program "Student situation";
+
+(* starts the program *)
+begin
+	const grades := array [5, 1, 9];
+
+	var sum := 0;
+	for (var grade of grades) do
+		sum := sum + grade;
+	end
+
+	var mean := sum / 3;
+
+	if (mean >= 7) do
+		writeln "Approved with" .. mean;
+	else if (mean >= 4) do
+		writeln "Retake with" .. mean;
+	else
+		writeln "Failed with" .. mean;
+	end
+end

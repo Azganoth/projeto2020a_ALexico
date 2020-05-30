@@ -1,0 +1,41 @@
+program "Dead simple lexer";
+
+(* starts the program *)
+begin
+	const source := "program\n\nbegin\nend";
+	var pointer := 0;
+
+	procedure consume do
+		pointer := pointer + 1;
+	end
+
+	procedure skip_whitespaces do
+		while (source[pointer] == " " or source[pointer] == "\n") do
+			call consume;
+		end
+	end
+
+	label consume_everything
+	call skip_whitespaces;
+
+	if source[pointer] == "program" do
+		call consume;
+		writeln "PROGRAM";
+	end
+
+	if source[pointer] == "begin" do
+		call consume;
+		writeln "BEGIN";
+	end
+
+	if source[pointer] == "end" do
+		call consume;
+		writeln "END";
+	end
+
+	if (pointer <= 21) do
+		goto consume_everything;
+	end
+
+	writeln "EOF";
+end

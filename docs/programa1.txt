@@ -1,0 +1,17 @@
+program "Asnwer to the Ultimate Question";
+
+(* starts the program *)
+begin
+	var a := 40;
+
+	(* adds 1 to `a` *)
+	procedure increment do
+		a := a + 1;
+	end
+
+	while (a not 42) do
+		call increment;
+	end
+
+	writeln "The Ultimate Asnwer is " .. a .. ".";
+end
