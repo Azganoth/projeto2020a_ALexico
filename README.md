@@ -111,9 +111,9 @@ Qualquer token pode ser separado por espaço(s) em branco, fim de arquivo ou com
 
 ![Diagrama (Autômato Finito)](/docs/diagrama.png)
 
-### Diagram de classe
+### Diagrama de classe
 
-![Diagram de classe](/docs/diagrama_de_classe.png)
+![Diagrama de classe](/docs/diagrama_de_classe.png)
 
 ## Licença
 
