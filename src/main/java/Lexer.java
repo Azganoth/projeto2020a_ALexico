@@ -2,12 +2,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import lombok.RequiredArgsConstructor;
 
 /**
  * Representa um analisador léxico da linguagem LMS.
  */
-@RequiredArgsConstructor
 public class Lexer {
 
 	/**
@@ -87,6 +85,10 @@ public class Lexer {
 	 * A posição do ponteiro.
 	 */
 	private int pointer = 0;
+
+	public Lexer(String sourceCode) {
+		this.sourceCode = sourceCode;
+	}
 
 	/**
 	 * Retorna o caractére embaixo do ponteiro, sem consumi-lo. Retorna {@code '\u005Cu0000'} caso o

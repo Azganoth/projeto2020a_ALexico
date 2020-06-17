@@ -1,10 +1,6 @@
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-
 /**
  * Representa uma descrição de um token da linguagem LMS.
  */
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public enum TokenDescription {
 
 	SPECIAL_SYMBOL("Símbolo especial"), //
@@ -19,6 +15,10 @@ public enum TokenDescription {
 	RELATIONAL_OPERATOR("Operador relacional"), //
 	ASSIGNMENT("Atribuição"), //
 	EOL("Fim de arquivo"); //
+
+	private TokenDescription(String description) {
+		this.description = description;
+	}
 
 	/**
 	 * A descrição de um token.

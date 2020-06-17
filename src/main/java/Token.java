@@ -1,14 +1,12 @@
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.ToString;
-
 /**
  * Representa um token da linguagem LMS.
  */
-@AllArgsConstructor
-@Getter
-@ToString
 public class Token {
+
+	public Token(TokenType type, String value) {
+		this.type = type;
+		this.value = value;
+	}
 
 	/**
 	 * O tipo de um token.
@@ -19,6 +17,14 @@ public class Token {
 	 * O valor de um token.
 	 */
 	private String value;
+
+	public TokenType getType() {
+		return this.type;
+	}
+
+	public String getValue() {
+		return this.value;
+	}
 
 	public int getCode() {
 		return this.type.getCode();

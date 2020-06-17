@@ -1,12 +1,6 @@
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
 /**
  * Representa um tipo de token da linguagem LMS.
  */
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-@Getter
 public enum TokenType {
 
 	PROGRAM(1, TokenDescription.RESERVED_WORD), // PROGRAM
@@ -61,6 +55,11 @@ public enum TokenType {
 	DOUBLE_DOT(50, TokenDescription.SPECIAL_SYMBOL), // ..
 	EOL(51, TokenDescription.EOL); // $
 
+	private TokenType(int code, TokenDescription description) {
+		this.code = code;
+		this.description = description;
+	}
+
 	/**
 	 * O código de um token.
 	 */
@@ -70,5 +69,13 @@ public enum TokenType {
 	 * A descrição de um token.
 	 */
 	private TokenDescription description;
+
+	public int getCode() {
+		return this.code;
+	}
+
+	public TokenDescription getDescription() {
+		return this.description;
+	}
 
 }
