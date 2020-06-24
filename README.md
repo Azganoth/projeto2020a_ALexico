@@ -4,7 +4,7 @@ Um analisador léxico para a linguagem LMS como requisito para a matéria Teoria
 
 ### ⚙️ Scripts
 
-**Necessário ter Java 8**
+**Necessário ter Java 11**
 
 Execução: `./gradlew run`
 
